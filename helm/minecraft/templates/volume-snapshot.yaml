@@ -1,0 +1,8 @@
+apiVersion: snapshot.storage.k8s.io/v1
+kind: VolumeSnapshot
+metadata:
+  name: backup-snapshot
+spec:
+  volumeSnapshotClassName: backup-snapshot-class
+  source:
+    persistentVolumeClaimName: minecraft-data-pvc-csi
